@@ -21,8 +21,9 @@ type todoType = {
 const Todo = () => {
   const storageTodoList = (): todoType[] =>
     JSON.parse(window.localStorage.getItem('todoList')!);
+  const initialTodo = storageTodoList() || [];
 
-  const [todoList, setTodoList] = useState<todoType[]>(storageTodoList || []);
+  const [todoList, setTodoList] = useState<todoType[]>(initialTodo);
   const [filter, setFilter] = useState<statusTypes | 'all'>('all');
   const enteredInputValue = useRef<HTMLInputElement>(null);
   const renderDraggable = useDraggableInPortal();
