@@ -8,20 +8,16 @@ type Props = {
 };
 
 const TodoInput = ({ onSubmit, inputRef }: Props) => {
-  const btnClickHandler = () => {
+  const btnClickHandler = (event: any) => {
     if (!inputRef.current) return;
-
+    onSubmit(event);
     inputRef.current.focus();
   };
 
   return (
     <div className={classes['todo-input-div']}>
       <form onSubmit={onSubmit}>
-        <TodoBtnCheck
-          status={statusTypes.Active}
-          type="submit"
-          onClick={btnClickHandler}
-        />
+        <TodoBtnCheck status={statusTypes.Active} onClick={btnClickHandler} />
         <input
           className={classes['todo-input-div--input']}
           ref={inputRef}

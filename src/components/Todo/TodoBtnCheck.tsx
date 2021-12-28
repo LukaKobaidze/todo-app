@@ -4,22 +4,18 @@ import IconCheck from '../Icons/IconCheck';
 
 type Props = {
   status: statusTypes;
-  type?: 'button' | 'submit' | 'reset';
-  onClick?: () => void;
+  onClick?: (event?: any) => void;
 };
 
-const TodoBtnCheck = ({ status, type, onClick }: Props) => {
-  const btnType = !type ? 'button' : type;
-
+const TodoBtnCheck = ({ status, onClick }: Props) => {
   return (
-    <button
+    <div
       className={`${classes.btn} ${classes[`btn--bg-${status}`]}`}
       onClick={onClick}
-      type={btnType}
     >
       <IconCheck className={classes['checked--icon']} />
       {status === 'active' && <div className={classes['btn--overlay']} />}
-    </button>
+    </div>
   );
 };
 
