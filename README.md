@@ -49,7 +49,7 @@ Users should be able to:
 
 ### What I learned
 
-While working through this project, I learned how to use library called react-beautiful-dnd, which is great for Drag and Drop functionality. I also learned new CSS media feature - '@media (hover: hover | none)' and '@media (pointer: none | coarse | fine)' which is great for checking user's device (touch device, etc.)
+While working through this project, I learned how to use library called react-beautiful-dnd, which is great for Drag and Drop functionality. I also learned new CSS media feature - '@media (hover: hover | none)' and '@media (pointer: none | coarse | fine)' which you can use it to check what is user's device (touch device, etc.)
 
 ## Author
 
