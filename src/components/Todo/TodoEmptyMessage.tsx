@@ -7,9 +7,9 @@ type Props = {
 
 const TodoEmptyMessage = ({ taskType }: Props) => {
   return (
-    <p className={classes.message}>
+    <li className={classes.message}>
       You don't have any {taskType === 'all' ? '' : taskType} todos.
-    </p>
+    </li>
   );
 };
 

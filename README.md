@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [solution](https://www.frontendmentor.io/solutions/todo-app-with-draganddrop-react-typescript-scss-reactbeautifuldnd-liK_E0L47)
+- Live Site URL: [live site](https://lukakobaidze-todoapp.netlify.app/)
 
 ## My process
 
@@ -49,7 +49,7 @@ Users should be able to:
 
 ### What I learned
 
-While working through this project, I learned how to use library called react-beautiful-dnd, which is great for Drag and Drop functionality. I also learned new CSS media feature - '@media (hover: hover | none)' and '@media (pointer: none | coarse | fine)' which you can use it to check what is user's device (touch device, etc.)
+While working through this project, I learned how to use library called react-beautiful-dnd, which is great for Drag and Drop functionality. I also learned new CSS media feature - '@media (hover: hover | none)' and '@media (pointer: none | coarse | fine)' which you can use it to check what is user's device (touch device, etc.). And also got more comfortable using React and TypeScript
 
 ## Author
 

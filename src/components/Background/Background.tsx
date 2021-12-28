@@ -11,7 +11,7 @@ type Props = {
 
 const BackgroundImage = ({ theme }: Props) => {
   return (
-    <div className={classes.div}>
+    <header className={classes.div}>
       {/* Dark theme */}
       {theme === 'dark' && (
         <Image image={imageDark} imageMobile={imageDarkMobile} />
@@ -21,7 +21,7 @@ const BackgroundImage = ({ theme }: Props) => {
       {theme === 'light' && (
         <Image image={imageLight} imageMobile={imageLightMobile} />
       )}
-    </div>
+    </header>
   );
 };
 
