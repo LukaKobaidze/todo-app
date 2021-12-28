@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+:root {
+  --cls-bright-blue: hsl(220, 98%, 61%);
+  --cls-bright-blue-scroll-hover: hsla(220, 98%, 61%, 0.7);
+  --cls-bright-blue-scroll-active: hsla(220, 98%, 61%, 0.55);
+  --cls-check-background: linear-gradient(
+    hsl(192, 100%, 67%),
+    hsl(280, 87%, 65%)
+  );
+
+  --font-family-primary: 'Josefin Sans', sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --font-size-primary: 18px;
+}
+
+body.theme--dark {
+  --cls-background: hsl(235, 21%, 11%);
+  --cls-bg-item: hsl(235, 24%, 19%);
+  --cls-item-border: hsl(237, 14%, 26%);
+  --cls-item-text: hsl(234, 39%, 85%);
+  --cls-item-text-completed: hsl(233, 14%, 35%);
+  --cls-item-text-line-through: hsl(234, 11%, 52%);
+  --cls-text-hover: hsl(236, 33%, 92%);
+  --cls-filter-text: hsl(233, 14%, 35%);
+  --cls-text-dragndrop: hsl(233, 14%, 35%);
+
+  --shadow-todo: 0 25px 40px rgba(0, 0, 0, 0.4);
+}
+
+body.theme--light {
+  --cls-background: hsl(236, 33%, 92%);
+  --cls-bg-item: hsl(0, 0%, 98%);
+  --cls-item-border: hsl(236, 33%, 92%);
+  --cls-item-text: hsl(235, 19%, 35%);
+  --cls-item-text-completed: hsl(233, 11%, 84%);
+  --cls-item-text-line-through: hsl(233, 11%, 84%);
+  --cls-text-hover: hsl(235, 19%, 35%);
+  --cls-filter-text: hsl(236, 9%, 61%);
+  --cls-text-dragndrop: hsl(236, 9%, 61%);
+
+  --shadow-todo: 0 25px 30px rgba(0, 0, 0, 0.05);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-primary);
+  background-color: var(--cls-background);
+  transition: background-color 0.5s;
+
+  @media (max-width: 500px) {
+    font-size: 15px;
+  }
+
+  @media (max-width: 415px) {
+    font-size: 12px;
+  }
+}

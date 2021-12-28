@@ -1,0 +1,57 @@
+.items-filter-div {
+  border-radius: 6px;
+  overflow: hidden;
+  min-height: 50vh;
+  box-shadow: var(--shadow-todo);
+
+  @media (max-width: 575px) {
+    overflow: visible;
+  }
+}
+
+.items-wrapper {
+  height: 49.44vh;
+  min-height: 329.75px;
+  overflow-y: visible;
+  overflow-x: hidden;
+  background-color: var(--cls-bg-item);
+  
+
+  &::-webkit-scrollbar {
+    width: 10px;
+
+    &-track {
+      background: var(--cls-bg-item);
+    }
+
+    &-thumb {
+      background: var(--cls-bright-blue);
+
+      &:hover {
+        background: var(--cls-bright-blue-scroll-hover);
+      }
+      &:active {
+        background: var(--cls-bright-blue-scroll-active);
+      }
+    }
+  }
+
+  @supports (scrollbar-color: var(--cls-bright-blue)) {
+    * {
+      scrollbar-color: var(--cls-bright-blue) var(--cls-bg-item);
+      scrollbar-width: thin;
+    }
+  }
+
+  @media (max-width: 575px) {
+    border-radius: 7px 7px 0 0;
+  }
+  @media (max-width: 500px) {
+    height: 48.5vh;
+  }
+
+  @media (max-width: 415px) {
+    min-height: 250px;
+    height: 45.2vh;
+  }
+}

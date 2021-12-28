@@ -1,0 +1,7 @@
+.theme-btn {
+  cursor: pointer;
+
+  @media (max-width: 415px) {
+    transform: scale(0.9);
+  }
+}
