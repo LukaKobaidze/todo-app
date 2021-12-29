@@ -24,7 +24,7 @@ const TodoFilter = (props: Props) => {
       setShowClearConfirmation(false);
       setClickedOutside(false);
     }
-  });
+  }, [clickedOutside, setClickedOutside]);
 
   const toggleConfirmationHandler = () => {
     setShowClearConfirmation(curState => {
