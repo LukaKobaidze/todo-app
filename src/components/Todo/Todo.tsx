@@ -167,6 +167,9 @@ const Todo = () => {
           clear={{
             type: statusTypes.Completed,
             handler: clearHandler,
+            typeAmount: todoList.filter(
+              item => item.status === statusTypes.Completed
+            ).length,
           }}
           curFilter={filter}
         />

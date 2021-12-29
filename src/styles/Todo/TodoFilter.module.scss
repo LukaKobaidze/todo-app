@@ -8,6 +8,7 @@ $color-transition-time: 0.2s;
   padding: 20px 25px;
   font-size: 15px;
   border-top: 1px solid var(--cls-item-border);
+  border-radius: 0 0 7px 7px;
 
   @media (max-width: 575px) {
     position: relative;
@@ -68,22 +69,73 @@ $color-transition-time: 0.2s;
     }
   }
   &--div span,
-  &--clear {
+  &--clear-text {
     text-transform: capitalize;
     cursor: pointer;
     user-select: none;
   }
   &--clear {
-    transition: color $color-transition-time;
+    &-div {
+      position: relative;
+    }
+    &-confirmation {
+      color: hsl(234, 39%, 85%);
+      font-size: 18px;
+      position: absolute;
+      top: 0;
+      transform: translateY(-115%);
+      background-color: #ff3333;
+      width: 225px;
+      padding: 20px;
+      border-radius: 7px;
+      animation: fadeIn 0.25s ease-out;
+      animation-fill-mode: forwards;
 
-    @media (hover: hover) {
-      &:hover {
-        color: var(--cls-item-text);
+      @media (max-width: 825px) {
+        transform: translate(-50%, -115%);
+      }
+      @media (max-width: 500px) {
+        transform: translate(-45%, -115%) scale(0.9);
+      }
+      @media (max-width: 310px) {
+        transform: translate(-125px, -115%) scale(0.9);
+        width: 75vw;
+      }
+
+      button {
+        padding: 10px 20px;
+        border-radius: 6px;
+        border: none;
+        margin-top: 20px;
+        cursor: pointer;
+        font-weight: var(--font-weight-bold);
+
+        &:hover {
+          background-color: darken($color: #fff, $amount: 30);
+        }
+      }
+    }
+    &-text {
+      transition: color $color-transition-time;
+
+      @media (hover: hover) {
+        &:hover {
+          color: var(--cls-item-text);
+        }
       }
     }
   }
 
   &--active {
     color: var(--cls-bright-blue);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
